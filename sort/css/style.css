@@ -1,0 +1,155 @@
+body {
+    background:#1A1A40;
+    color:#FFF9F9;
+    font-family: 'Oswald', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    min-height:80vh;
+}
+header {
+    
+    margin:0 auto;
+    width:max-content;
+}
+h1 {
+    font-size: 3em;
+}
+#game-container {
+    display:flex;
+    flex-direction: row;
+    margin:0 auto;
+    width:max-content;
+}
+#buttons-div {
+    display:flex;
+}
+.game-col {
+    display:flex;
+    flex-direction: column;
+}
+
+.eq-bar {
+    width:5em;
+    margin:0.2em 0.4em;
+}
+.game-indicator-container {
+    width:5em;
+    margin:1em 0.4em 0;
+}
+.c0 {
+    fill:#262655;
+}
+.c1 {
+    fill:#72147E;
+}
+.c2 {
+    fill:#F21170;
+}
+.c3 {
+    fill: #FA9905;
+}
+.c4 {
+    fill:#FF5200;
+}
+.c5 {
+    fill:#001aff;
+}
+.c6 {
+    fill:#2bff00;
+}
+
+.on {
+    fill:#f3a93a;
+}
+.border-on {
+    fill:#c5882d;
+}
+.off {
+    fill:#262655;
+}
+.border-off {
+    /* fill:#31315f; */
+    fill:#262655;
+}
+.won {
+    fill:#3af3b5;
+    fill:#262655;
+}
+.border-won {
+    fill:#25ca93;
+    fill:#262655;
+}
+#game-desc-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-btn {
+    border:none;
+    padding:0.5em 1.5em;
+    color:#1A1A40;
+    background:#f3a93a;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size:2em;
+}
+.options-btn {
+    background:#1A1A40;
+    color:#FFF9F9;
+    border:none;
+    padding: 1em 2em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.restart-btn-won {
+    background:#3af3b5;
+}
+
+.game-btn:hover, .game-btn:focus {
+    background:#f5c884;
+}
+h2 {
+    margin:0;
+    padding:1em 0;
+}
+h1{
+    margin-top: 0;
+    padding-top: 0;
+}
+#options-toggle{
+    position:fixed;
+    display:flex;
+    top:1em;
+    right:1em;
+    color:#72147E;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#options-div {
+    position:fixed;
+    display:none;
+    top:0;
+    right:0;
+}
+#options {
+    
+    padding:0 2em 1em;
+    display:flex;
+    flex-direction:column;
+    background:  #72147E;
+    align-items: center;
+}
+#options input{
+    margin:0.5em;
+}
+.form-set {
+    width:100%;
+}
+
+
+/* F33RKOHNM8F */
