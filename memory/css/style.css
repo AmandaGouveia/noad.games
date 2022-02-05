@@ -1,0 +1,10 @@
+.memory-btn{
+    background:lightblue;
+    color:black;
+    border:none;
+    border-radius:1em;
+    padding: 1em;
+    font-size:2em;
+    width:4em;
+    height:4em;
+}
