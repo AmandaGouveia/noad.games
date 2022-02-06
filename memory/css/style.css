@@ -76,3 +76,30 @@ footer a:focus{
     background:#cec6b9;
     color:#0D1238;
 }
+.span-16{
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    text-align: center;
+    place-self: center;
+    font-size:4em;
+}
+.btn-span-16 {
+    grid-column-start:2;
+    grid-column-end:span 2;
+    grid-row-start:3;
+    grid-row-end:span 1;
+    text-align: center;
+    place-self: center;
+    background:white;
+    color: #0D1238;
+    font-size: 2em;
+    padding:1em 2em;
+    border:none;
+    font-weight: 700;
+}
+.btn-span-16:hover,
+.btn-span-16:focus {
+    background-color: yellow;
+}

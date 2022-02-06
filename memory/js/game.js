@@ -13,16 +13,21 @@ let selected = -1;
 
 let gameIcons = [];
 let solved = [];
+let timer = 0;
 
 let showingCards = false;
 let secondCard = -1;
+
+let debug = false;
 
 function hideCard(n){
     document.getElementById(`game-btn-${n}`).innerHTML = "";
     document.getElementById(`game-btn-${n}`).className = "memory-btn card-hidden";
 }
 
-function cardClick(n){
+function timeOutFromClick(){
+    if(debug){console.log("timeout")}
+    clearTimeout(timer);
     if (showingCards){
         if (gameIcons[secondCard] === gameIcons[selected]){
             solved[secondCard] = true;
@@ -30,7 +35,11 @@ function cardClick(n){
             document.getElementById(`game-btn-${secondCard}`).className = "memory-btn card-solved";
             document.getElementById(`game-btn-${selected}`).className = "memory-btn card-solved";
             if (isWon()){
-                console.log("You Win!");
+                let content = `
+                <h2 class="span-${numCards}">You Win!</h2>
+                <button onclick="startGame()" class="playagain btn-span-${numCards}">Play Again</button>
+                `
+                document.getElementById("game-container").innerHTML = content;
             }
             
         } else {
@@ -40,7 +49,35 @@ function cardClick(n){
 
         selected = -1;
         showingCards = false;
-    } else if (solved[n]===false){
+    }
+}
+
+function cardClick(n){
+    clearTimeout(timer);
+    if(debug){console.log(`click ${n} selected ${selected} second ${secondCard}`)}
+    if (showingCards){
+        if (gameIcons[secondCard] === gameIcons[selected]){
+            solved[secondCard] = true;
+            solved[selected] = true;
+            document.getElementById(`game-btn-${secondCard}`).className = "memory-btn card-solved";
+            document.getElementById(`game-btn-${selected}`).className = "memory-btn card-solved";
+            if (isWon()){
+                let content = `
+                <h2 class="span-${numCards}">You Win!</h2>
+                <button onclick="startGame()" class="playagain btn-span-${numCards}">Play Again</button>
+                `
+                document.getElementById("game-container").innerHTML = content;
+            }
+            
+        } else {
+            hideCard(secondCard);
+            hideCard(selected);
+        }
+
+        selected = -1;
+        showingCards = false;
+    }
+    if (solved[n]===false){
         if (selected == n){
             hideCard(selected);
             selected = -1;
@@ -50,6 +87,7 @@ function cardClick(n){
                 document.getElementById(`game-btn-${n}`).innerHTML = `<i class="fas fa-${gameIcons[n]}"></i>`;
                 showingCards = true;
                 secondCard = n;
+                timer = setTimeout(function() { clearTimeout(timer); timeOutFromClick();}, 3000);
             }
             else {
                 selected = n;
@@ -73,6 +111,7 @@ function isWon() {
 }
 
 function startGame(){
+    timer = clearTimeout()
     gameIcons = icons.sort(() => Math.random() - 0.5);
     solved = [];
     for (let i = 0; i < numCards; i++) {
