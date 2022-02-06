@@ -3,26 +3,43 @@
 <head>
     <title>Memory by NoAd Games</title>
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ee1e1d161b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="big-container">
     <div id="container">
         <header>
             <h1>Memory</h1>
         </header>
         <main>
-            <div id="game-container">
-                <button id="game-btn-1" class="memory-btn"><i class="fas fa-camera"></i></button>
-                <button id="game-btn-1" class="memory-btn"><i class="fas fa-question"></i></button>
-                <button id="game-btn-1" class="memory-btn"><i class="fas fa-question"></i></button>
-                <button id="game-btn-1" class="memory-btn"><i class="fas fa-question"></i></button>
+            <div id="game-container" class="cards-16">
+                <button id="game-btn-1" class="memory-btn card-shown"><i class="fas fa-camera"></i></button>
+                <button id="game-btn-2" class="memory-btn card-hidden"></button>
+                <button id="game-btn-3" class="memory-btn card-hidden"></button>
+                <button id="game-btn-4" class="memory-btn card-hidden"></button>
+                <button id="game-btn-5" class="memory-btn card-hidden"></button>
+                <button id="game-btn-6" class="memory-btn card-hidden"></button>
+                <button id="game-btn-7" class="memory-btn card-hidden"></button>
+                <button id="game-btn-8" class="memory-btn card-hidden"></button>
+                <button id="game-btn-9" class="memory-btn card-hidden"></button>
+                <button id="game-btn-10" class="memory-btn card-hidden"></button>
+                <button id="game-btn-11" class="memory-btn card-hidden"></button>
+                <button id="game-btn-12" class="memory-btn card-hidden"></button>
+                <button id="game-btn-13" class="memory-btn card-hidden"></button>
+                <button id="game-btn-14" class="memory-btn card-hidden"></button>
+                <button id="game-btn-15" class="memory-btn card-hidden"></button>
+                <button id="game-btn-16" class="memory-btn card-hidden"></button>
             </div>
         </main>
         <footer>
             <p><a href="https://noad.games">NoAd Games</a></p>
         </footer>
     </div>
+</div>
+<script src="js/game.js"></script>
 </body>
 </html>

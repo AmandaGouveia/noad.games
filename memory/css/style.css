@@ -1,10 +1,78 @@
+body {
+    background:#0D1238;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    font-size:16px;
+}
+h1{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    font-size:3em;
+    margin:0;
+}
+#big-container {
+    background:url("../img/cork-board.png");
+    width:100%;
+}
+
+header, footer {
+    text-align: center;
+    background:#0D1238;
+    color:white;
+    padding:1em 0;
+    width:100%;
+}
 .memory-btn{
-    background:lightblue;
-    color:black;
+    background:#cec6b9;
+    color:#0D1238;
     border:none;
     border-radius:1em;
     padding: 1em;
     font-size:2em;
     width:4em;
     height:4em;
+    margin:0.2em;
+    border: 0.2em solid white;
+}
+#game-container {
+    display:grid;
+    width:max-content;
+    margin:0 auto;
+    padding:1em;
+}
+
+.cards-16 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.cards-20 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.card-hidden {
+    background:url("../img/oriental-tiles.png");
+    border: 0.2em solid rgba(0, 0, 0, 0);
+}
+.card-hidden:hover,
+.card-hidden:focus {
+    background:url("../img/oriental-tiles.png");
+    border: 0.2em solid rgb(255, 255, 255);
+}
+.card-solved {
+    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    border: 0.2em solid rgba(0, 0, 0, 0);
+}
+footer a{
+    text-decoration: none;
+    color:white;
+}
+footer a:hover,
+footer a:focus{
+    color:yellow;
+}
+.card-shown {
+    background:#cec6b9;
+    color:#0D1238;
 }
